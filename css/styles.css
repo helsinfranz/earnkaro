@@ -238,8 +238,101 @@ header:hover {
 }
 
 footer {
-  text-align: center;
-  margin-bottom: 4rem;
+  padding: 8rem 7.2rem;
+  background-color: black;
+  border-top-left-radius: 4rem;
+  /* border-top-right-radius: 4rem; */
+  padding-bottom: 6rem;
+}
+
+.main_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.upper_footer {
+  display: flex;
+  align-items: flex-start;
+  gap: 15%;
+}
+
+.footer_links {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  color: white;
+}
+
+.footer_links div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.single_footer_link {
+  font-size: 1.6rem;
+  font-weight: 500;
+  opacity: 0.8;
+  cursor: pointer;
+  max-width: fit-content;
+}
+
+.single_footer_link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+}
+
+.single_footer_link:hover::after {
+  width: 100%;
+}
+
+.single_footer_link:hover {
+  opacity: 1;
+}
+
+.border_seperater {
+  border-top: 2px solid rgb(81, 81, 81);
+  /* background-color: rgb(163, 163, 163); */
+}
+
+.lower_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0.8;
+}
+
+.footer_social_icons {
+  display: flex;
+  gap: 4rem;
+}
+
+.footer_social_icon {
+  cursor: pointer;
+}
+
+.footer_social_icon > svg {
+  width: 4rem;
+  height: 4rem;
+  transition: all 0.4s;
+}
+
+.footer_social_icon > svg:hover {
+  fill: #5890ff;
+  transition: all 0.4s;
+}
+
+.footer_copyright {
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 @media (max-width: 79em) {
@@ -259,7 +352,23 @@ footer {
   }
 }
 
+@media (max-width: 64em) {
+  footer {
+    padding: 6rem 4rem;
+    padding-bottom: 4rem;
+  }
+  .main_footer {
+    gap: 5rem;
+  }
+  .upper_footer {
+    gap: 10%;
+  }
+}
+
 @media (max-width: 40.25em) {
+  .header_backdrop {
+    display: none;
+  }
   .nav_earn > .nav_name {
     top: 71%;
   }
@@ -313,5 +422,44 @@ footer {
   .main_navigations {
     margin-top: 0rem;
     margin-bottom: 1.8rem;
+  }
+  footer {
+    padding: 5rem 3rem;
+    padding-bottom: 3rem;
+  }
+  .main_footer {
+    gap: 4rem;
+  }
+  .upper_footer {
+    gap: 7.5%;
+  }
+  .footer_links {
+    gap: 0.7rem;
+  }
+  .footer_links div {
+    gap: 0.4rem;
+  }
+  .single_footer_link {
+    font-size: 1.2rem;
+  }
+  .footer_social_icons {
+    gap: 3rem;
+  }
+  .footer_social_icon > svg {
+    width: 3rem;
+    height: 3rem;
+  }
+  .footer_copyright {
+    font-size: 1rem;
+  }
+  .footer_logo {
+    display: none;
+  }
+}
+
+@media (max-width: 24em) {
+  .single_footer_link {
+    font-size: 1.2rem;
+    width: min-content;
   }
 }
